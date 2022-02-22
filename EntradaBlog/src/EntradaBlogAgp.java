@@ -7,8 +7,11 @@
 public class EntradaBlogAgp {
 	
 	
-	/**Clase creada el 20/02/2022
-	 * Por Aroa Guirado Picazo
+	/**
+	 * @see blog
+	 * @version 22/02/2022
+	 *
+	 * 
 	 */
 	
 		
@@ -17,15 +20,26 @@ public class EntradaBlogAgp {
 		private String texto;
 		private String autor;
 		
-		/**Excepción que impedia que el programa se ejecutase correctamente
-		 *  debido a la introducción de un numero negativo en el main
+		/**
+		 * 
+		 * @param id
+		 * @param autor
+		 * @param texto
+		 * @throws IllegalArgumentException
 		 */
+		
 		public EntradaBlogAgp(int id,String autor,String texto)throws IllegalArgumentException{
 			if(id<=0) throw new IllegalArgumentException("El id no puede ser negativo");
 			this.id=id;
 			this.autor=autor;
 			this.texto=texto;
 		}
+		
+		/**Excepción que impedia que el programa se ejecutase correctamente
+		 *  debido a la introducción de un numero negativo en el main
+		 *  @throws
+		 */
+		
 		@Override
 		public String toString(){
 			String cad="";
@@ -33,6 +47,11 @@ public class EntradaBlogAgp {
 			cad+="\n "+texto;
 			return cad;
 		}
+		
+		/**
+		 * 
+		 * @return
+		 */
 		
 		
 		public int getId(){
@@ -58,6 +77,10 @@ public class EntradaBlogAgp {
 		public static void main(String[] args) {
 	        /**Debemos cambiar el número de entrada, 
 	         * dado que tenemos una excepción que nos impide que el número sea negativo*/
+			/**
+			 * @param 
+			 * 
+			 */
 			
 			EntradaBlogAgp e1=new EntradaBlogAgp (3,"ana","Últimas noticias, está disponible BixBy 2.0");
 			
